@@ -36,7 +36,11 @@ Now create a new a new VM, Ubuntu 64 based like below configuration. Ensure that
 
 <img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/02-ClusterDeployment/content/create-vdi.png" alt="create-vdi">
 
-When the VM is created succesfully, you can start the Ubuntu instance.
+When the VM is created succesfully, you can configure `Port Forwarding` under 'Settings\Network\Adapter 1\Advanced.
+
+<img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/02-ClusterDeployment/content/port-vdi.png" alt="port-vdi">
+
+Now start the Ubuntu instance and try to login (`ssh osboxes@127.0.0.1:2222`) using the credentials below.
 
 Credentials are:
 - username: osboxes
