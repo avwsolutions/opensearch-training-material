@@ -69,6 +69,6 @@ Examine the components that are used and which data sets are imported in OpenSea
 
 ## Next Steps
 
-You are ready to start with the second lab about [Cluster Deployment](01-ClusterDeployment/README.md) in OpenSearch. Be aware that the trainer might have to explain the training material and provide additional instructions for a jump start.
+You are ready to start with the second lab about [Cluster Deployment](02-ClusterDeployment/README.md) in OpenSearch. Be aware that the trainer might have to explain the training material and provide additional instructions for a jump start.
 
 Enjoy the exercises!!!
