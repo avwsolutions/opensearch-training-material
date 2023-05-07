@@ -76,5 +76,8 @@ Before creation take notice that the *Edit as Query DSL* is not yet available. T
 
 Now apply this filter.
 
+After succesfull creation you will see the filter enabled.  Click the filter and the filter options will be shown.
 
+<img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/04-Discover/content/filter-options.png" alt="filter-options">
 
+Play around with the options like Disable, Edit and  extremely helpful option to "Exclude" results.
