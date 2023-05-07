@@ -143,7 +143,7 @@ ls data/nodes/0/indices/<uuid>
 
 ## Exercise 2 - Index management UI
 
-This second exercise we will have a look at possibilities of managing an index using the UI. This is provided by a plugin and really helpful if users don't have API knowledge.
+This second exercise we will have a look at possibilities of managing an index using the UI. This is provided by a plugin and really helpful if users don't have API knowledge. First take some time to click around and learn about the indices that live in your cluster.
 
 ### 2.1 - Create index
 
@@ -203,3 +203,100 @@ Open index management, go to indices, click on the starwars index and select Rei
 ```
 
 <img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/05-Indices/content/index-mgmt.png" alt="index-mgmt">
+
+## Exercise 3 - Available APIS
+
+This exercise the attendee will learn all about the APIS that are availabe. We will start with the CAT API followed by a selection of helpful APIs for aliases, indexing and document activities.
+
+### 3.1 - CAT API for Index management
+
+ CAT stands for 'compact and aligned text' which return human-readable text instead of JSON.  During this part we will show you the most helpful CAT APIs to use when handling with indices.
+
+ Open your dev tools and execute the following.
+
+ ```
+GET _cat
+ ```
+ This output shows all available CAT API endpoints. I have marked the endpoints that are helpfull throubleshooting index issues.
+
+| Endpoint |
+|----------|
+|  =^.^=                                |
+| **/_cat/allocation** |
+| **/_cat/segment_replication** |
+| **/_cat/segment_replication/{index}** |
+| **/_cat/shards** |
+| **/_cat/shards/{index}** |
+| /_cat/cluster_manager |
+| /_cat/nodes |
+| /_cat/tasks |
+| **/_cat/indices** |
+| **/_cat/indices/{index}** |
+| **/_cat/segments** |
+| **/_cat/segments/{index}** |
+| **/_cat/count** |
+| **/_cat/count/{index}** |
+| **/_cat/recovery** |
+| **/_cat/recovery/{index}** |
+| /_cat/health |
+| /_cat/pending_tasks |
+| **/_cat/aliases** |
+| **/_cat/aliases/{alias}** |
+| /_cat/thread_pool |
+| /_cat/thread_pool/{thread_pools} |
+| /_cat/plugins |
+| /_cat/fielddata |
+| /_cat/fielddata/{fields} |
+| /_cat/nodeattrs |
+| /_cat/repositories |
+| /_cat/snapshots/{repository} |
+| **/_cat/templates** |
+| /_cat/pit_segments |
+/_cat/pit_segments/{pit_id} |
+
+### 3.2 - Detecting index issues
+
+For detecting index issues we recently learned that every index has a `index health state`. This health state provides a good indication when indices have problems like write issues, missing shards or else.
+
+Which endpoint would you use to identify indices that are in a unhealthy state?
+ ```
+GET _cat/shards?v
+```
+
+### 3.3 - Detecting unassigned shards
+
+Below we will start with the Shards operation using the CAT API.
+
+We will start with increasing the total number of replicas to 4. Since we have two nodes, we should have `UNASSIGNED SHARDS`.
+Let's start.
+
+```
+PUT hello-world/_settings
+{
+  "index": {
+    "number_of_replicas": 4
+  }
+}
+```
+Which endpoint would you use to identify shards that are UNASSIGNED?
+What is the maximum number of replicas when you have two (data) nodes?
+```
+GET _cat/shards?v
+```
+
+As expected we can see the following in the output.
+```
+hello-world                                 1     r      UNASSIGNED                          
+hello-world                                 1     r      UNASSIGNED                          
+hello-world                                 1     r      UNASSIGNED                          
+hello-world                                 2     p      STARTED        0    208b 172.18.0.3 opensearch-node1
+hello-world                                 2     r      STARTED        0    208b 172.18.0.4 opensearch-node2
+hello-world                                 2     r      UNASSIGNED                          
+hello-world                                 2     r      UNASSIGNED                          
+hello-world                                 2     r      UNASSIGNED     
+```
+
+Now let's fix the index and reconfigure the number of replicas to the maximum accepted value. Use the `PUT statement` above as example.
+
+
+
