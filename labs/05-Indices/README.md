@@ -190,7 +190,7 @@ POST starwars/_doc
 
 Oeps, this shouldn't be there. Let's use the query below to reindex only the starfighter to a newly created starfighers index. Use the UI to complete this task.
 
-Open index management, go to indices, click on the starwars index and select Reindex from Actions menu (topright) and use the following select query.
+Open index management, go to indices, click on the starwars index and select Reindex from Actions menu (topright), choose Reindex a subset of documents (Advanced) and use the following select query.
 
 ```
  "query": {
