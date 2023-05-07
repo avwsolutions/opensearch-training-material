@@ -13,7 +13,7 @@ The following key topics are part of these exercises:
 - Aliases
 - Index templates
 
-## Exercise 1
+## Exercise 1 - Index basics
 
 This first exercise we will have a look at the file system after creating an index.  During this exercise you will learn the index basics like OpenSearch Index, OpenSearch Shard, Lucene Index and file system level stored Segments.
 
@@ -113,6 +113,8 @@ Now go back to the OpenSearch node Terminal and look if the new UUID has multipl
 Try the following to find out.
 
 ```
+docker ps | grep 9200
+docker exec -it <uuid> bash
 ls data/nodes/0/indices/<uuid>
 0  2  _state
 ```
@@ -133,9 +135,69 @@ PUT hello-world/_settings
 Try the following to find out.
 
 ```
+docker ps | grep 9200
+docker exec -it <uuid> bash
 ls data/nodes/0/indices/<uuid>
 0  1  2  3  _state
 ```
 
+## Exercise 2 - Index management UI
 
+This second exercise we will have a look at possibilities of managing an index using the UI. This is provided by a plugin and really helpful if users don't have API knowledge.
 
+### 2.1 - Create index
+
+Create a new index through the UI with the following settings
+
+Settings:
+- Named: 'starwars'
+- 2 Shards
+- 1 Replicas
+- Refresh interval of 5m
+
+After creation add an initial document.
+
+```
+POST starwars/_doc
+{
+  "message": "starfighter"
+}
+```
+
+Now try to search for this document.
+```
+POST starwars/_search
+```
+
+Still no results? What's going wrong?  
+
+Spoiler alert: Try to reconfigure one of the applied settings.
+
+### 2.2 - Reconfigure settings on index
+
+Open index management, go to indices and click on the starwars index. Now scroll down and update the Refresh interval to the minimum of 1s.
+
+### 2.3 - Reindex an index
+
+Now we are going to do a reindex using the UI. First we are going to add an additional document.
+
+```
+POST starwars/_doc
+{
+  "message": "darkfader"
+}
+```
+
+Oeps, this shouldn't be there. Let's use the query below to reindex only the starfighter to a newly created starfighers index. Use the UI to complete this task.
+
+Open index management, go to indices, click on the starwars index and select Reindex from Actions menu (topright).
+
+```
+ "query": {
+    "match": {
+      "message": {
+        "query": "starfighter"
+      }
+    }
+  }
+```
