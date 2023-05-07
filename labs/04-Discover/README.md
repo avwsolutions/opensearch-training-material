@@ -9,7 +9,7 @@ The following key topics are part of these exercises:
 - Using Discover
 - Applying Filters
 - Dashboards Query Language
-- Saving searches
+- Lucene
 
 ## Exercise 1 - Using Discover
 
@@ -53,7 +53,8 @@ Ensure that only the full name is added, everything is sorted by customer_id and
 
 <img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/04-Discover/content/order-columns.png" alt="order-colums">
 
-You may want to save your results as `orders-table`.
+You are required to save your results as `orders-table` for later usage.  You can find the save button at the top-right. 
+
 ## Exercise 2 - Applying filters
 
 This exercise you are going to apply filters. You maybe already set a *Time Filter* and *Filter* as part of the previous exercises, but we will now look further into in-depth configuration. For example setting *Absolute* time instead of *Relative*.
@@ -86,7 +87,7 @@ Play around with the options like *Disable*, *Edit* and  extremely helpful optio
 
 ### 2.3 - Applying multiple filters
 
-Most cases when multiple fields or values are involved you need to add multiple filters. Following task is about building such filter set by combing several filters for the use case below.
+Most cases when multiple fields or values are involved you need to add multiple filters. Following task is about building such filter set by combing several filters for the use case below. Multiple fields can act as Boolean filter using AND/OR logic.
 
 *Apply a search containing filtered results of Women’s shoes not sold in New York, sold to Mary, Brigitte or Betty with a price between 1 and 10 euros*
 
@@ -95,10 +96,58 @@ Now take some time to build all filters for this use case. Do you know another u
 
 ## Exercise 3 - Dashboards Query Language
 
-This exercise is about another great way of filtering results using the search bar. It almost provides the same functionality as filters, but this is query syntax. Another more powerful text-search provided query syntax is `Lucene`. Let's go through several examples using `Dashboards Query Language` (DQL) and Lucene.
+This exercise is about another great way of filtering results using the search bar. It almost provides the same functionality as filters, but this is query syntax. Another more powerful text-search provided query syntax is `Lucene`. Let's go through several examples using `Dashboards Query Language` (DQL).
 
 ### 3.1 - Verify if DQL is enabled
 
 Open `Discover` and at the right corner of the search bar you can see the currently selected query language. By default `DQL` is used, with `Lucene` as fallback. Click on `DQL` and you see the following options.
 
 <img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/04-Discover/content/dql-enabled.png" alt="dql-enabled">
+
+### 3.2 - Using DQL Syntax
+
+The following are example queries to help to get a deeper understanding of `DQL`.
+
+Just apply the queries to answer the questions and note used query and total of results.
+
+| Question                                                                                       | Total of results |
+|------------------------------------------------------------------------------------------------|------------------|
+| Does the field `customer_phone` exists as keyword?                                             |        ?         |
+| Show only `fullcustomer_full_name` when first name start with 'Bo' and last name ends with 's' |        ?         |
+| Only show documents where `customer_id` is greater then 10 and smaller then 20.                |        ?         |
+| Only get documents from `MALE` customers that ordered either from 'GB' or 'FR'.                |        ?         |
+| Get the all documents since yesterday.                                                         |        ?         |
+
+
+### 3.3 - Combining multiple DQL as Boolean queries
+
+Look back to exercise 2.3 and recreate the use case filter using DQL. Did you matched the same results?
+
+*Apply a search containing filtered results of Women’s shoes not sold in New York, sold to Mary, Brigitte or Betty with a price between 1 and 10 euros*
+
+## Exercise 4 - Lucene
+
+This exercise is about the native OpenSearch text-search in the search bar. Again the same functionality as filters, but this is query syntax. Big difference with `DQL` is that `Lucene` focusses on 'text-search' rather then aggregations using 'Keywords'. Let's go through several examples using Lucene.
+
+### 4.1 - Ensure that Lucene is enabled
+
+Now set the query language temporary to `Lucene` and answer the questions below.
+
+| Question                                                                                       | Total of results |
+|------------------------------------------------------------------------------------------------|------------------|
+| Show all emails that not start with 'clarice'                                                  |        ?         |
+| Show all orders that are older then yesterday?                                                 |        ?         |
+| Look for all orders and exclude 'manifacturer' 'Oceanavigations'                               |        ?         |
+| Only get orders where the product has a price between 10 and 100 EURO (without Tax)            |        ?         |
+
+### 4.2 - Combining multiple Lucene as Boolean queries
+
+Look back to exercise 2.3 and recreate the use case filter using Lucene. Did you matched the same results?
+
+*Apply a search containing filtered results of Women’s shoes not sold in New York, sold to Mary, Brigitte or Betty with a price between 1 and 10 euros*
+
+## Next Steps
+
+You are ready to start with the next lab about [Indices](../05-Indices/README.md) in OpenSearch. Be aware that the trainer might have to explain the training material and provide additional instructions for a jump start.
+
+Enjoy the exercises!!!

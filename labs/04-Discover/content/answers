@@ -1,0 +1,22 @@
+3.2
+
+customer_phone.keyword:*
+customer_full_name.keyword:Bo*s
+customer_id > 10 and customer_id < 20
+customer_gender: MALE and (geoip.country_iso_code: GB or geoip.country_iso_code: FR)
+order_date < now-1d
+
+3.3
+
+category: "Women's Shoes" and not geoip.city_name:"New York" and (customer_first_name:Mary or customer_first_name:Brigitte or customer_first_name:Betty) and (products.price > 1 or products.price < 10)
+
+4.1 
+
+!email:clarice*
+order_date < "2023-05-06"
+-manufacturer: Oceanavigations
+products.taxless_price: [10 TO 11]
+
+4.2
+
+category: "Women's Shoes" AND  -geoip.city_name:"New York" AND (customer_first_name:Mary OR customer_first_name:Brigitte OR customer_first_name:Betty) and products.price[1 TO 10]
