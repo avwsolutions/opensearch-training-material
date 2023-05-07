@@ -54,4 +54,27 @@ Ensure that only the full name is added, everything is sorted by customer_id and
 You may want to save your results as `orders-table`.
 ## Exercise 2 - Applying filters
 
-This exercise you are going to appy
+This exercise you are going to apply filters. You maybe already set a *Time Filter* and *Filter* as part of the previous exercises, but we will now look further into in-depth configuration. For example setting *Absolute* time instead of *Relative*.
+
+### 2.1 - Setting an Absolute time filter
+
+During this task you have set a specific *Abosolute* time filter. This differes from the already known *Relative* *like 7 days Ago* . For a particular reason we are asked to only show orders between a certain period.
+
+Configure an absolute time (start date & end date) that only shows documents between <u>Sunday **14-05-2023 12:00** and **Monday 15-05-2023 10:00**</u>.
+
+Ensure you have applied the Filter configuration.
+
+### 2.2 - Setting Filters
+
+Some cases we also want to filter out certain nose. For example when we are only interested in *Women Shoes*. This can be easily done using Filters.
+
+At the top left click **Add Filter**.  Now search for the *category* field and you may see two types available. We will explain later, but for now just choose the `category.keyword` field. Ensure we use *is* as Operator. After this a selection menu is populated where we can choose *Women Shoes*. 
+
+<img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/04-Discover/content/filter-sample.png" alt="filter-sample">
+
+Before creation take notice that the *Edit as Query DSL* is not yet available. This is populated after creation.
+
+Now apply this filter.
+
+
+
