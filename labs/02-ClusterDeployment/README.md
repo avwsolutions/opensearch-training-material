@@ -174,6 +174,6 @@ docker-compose logs (check logs)
 ```
 ## Next Steps
 
-You are ready to start with the second lab about [Getting Started](../03-GettingStarted/README.md) in OpenSearch. Be aware that the trainer might have to explain the training material and provide additional instructions for a jump start.
+You are ready to start with the next lab about [Getting Started](../03-GettingStarted/README.md) in OpenSearch. Be aware that the trainer might have to explain the training material and provide additional instructions for a jump start.
 
 Enjoy the exercises!!!
