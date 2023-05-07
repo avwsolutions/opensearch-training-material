@@ -143,7 +143,7 @@ ls data/nodes/0/indices/<uuid>
 
 ## Exercise 2 - Index management UI
 
-This second exercise we will have a look at possibilities of managing an index using the UI. This is provided by a plugin and really helpful if users don't have API knowledge. First take some time to click around and learn about the indices that live in your cluster.
+This second exercise we will have a look at possibilities of managing an index using the UI. This is provided by a plugin and really helpful if users don't have API knowledge. First take some time to click around and learn about the indices that live in your cluster. Inspect the columns and try to some actions like close and open an index.
 
 ### 2.1 - Create index
 
@@ -260,7 +260,28 @@ For detecting index issues we recently learned that every index has a `index hea
 
 Which endpoint would you use to identify indices that are in a unhealthy state?
  ```
-GET _cat/shards?v
+GET _cat/indices?v
+```
+
+Analyze the output below.
+
+this output:
+```
+health status index                                       uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+yellow open   security-auditlog-2023.04.30                6Nx8AFZ7S2ax1epcgS10ZQ   1   1        123            0    194.4kb        194.4kb
+yellow open   hello-world                                 7PSiCFIoT-iqWoOrznmdzA   4   1          0            0       832b           832b
+yellow open   shrinky                                     -0AiMwziQ_SLARF3sAQl2Q   1   1          0            0       208b           208b
+green  open   .opendistro_security                        brQvzZqWT_qfGYz-xpZuhw   1   0         10            2     59.3kb         59.3kb
+```
+
+What could be the reason why the system index `.opendistro_security` is still in `index health state` green?
+
+Most cases you may have lost a node or the cluster is out of storage. In these cases it's always helpful to have a replicas for recovery available.
+
+After starting your second `OpenSearch node` again use the `recovery` operations endpoint to follow index recoveries within the cluster.
+
+```
+GET _cat/recovery?v
 ```
 
 ### 3.3 - Detecting unassigned shards
