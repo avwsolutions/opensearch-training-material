@@ -30,7 +30,7 @@ In the following welcome screen click **Add data**.
 
 ### 1.3 - Setting our Tenant preference
 
-We now are now asked to set our preffered `Tenant` to save our `Dashboards`. For now we can choose *Private* and **Confirm**.
+We now are now asked to set your preferred `Tenant` to save our `Dashboards`. For now we can choose *Private* and **Confirm**.
 
 <img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/03-GettingStarted/content/tenant-msg.png" alt="tenant-msg">
 
