@@ -46,7 +46,7 @@ Credentials are:
 
 Now that we have the Ubuntu VM up and running we can start with configuration some of the OS prereqs and installation of Docker engine. We currently use Docker since Podman still is not really well compatible with earlier `docker-compose` files.
 
-### 1.2 - Configure Operating System prerequisites
+### 2.1 - Configure Operating System prerequisites
 
 Below the commands that need to hit the Terminal.
 
@@ -97,7 +97,7 @@ Examine the docker compose configuration.
 - How many active instances are included in the service we created?
 
 
-### 3.1 - Spin-up the OpenSearch cluster with Docker Compose
+### 3.2 - Spin-up the OpenSearch cluster with Docker Compose
 
 You can know spin-up the `OpenSearch Cluster`.
 
