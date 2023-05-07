@@ -52,11 +52,23 @@ For this exercise for both products we have the license model descriptions avail
 
 Examine the differences in the licenses between OpenSearch and Elasticsearch.
 - What do you notice and is the biggest difference?
-- Explain why OpenSearch uses the Apache 2.0 model.
+- Explain a peer attendee why OpenSearch uses the Apache 2.0 model.
 
 
-## Exercise 3 - Examine the training setup
+## Exercise 3 - Understanding the training setup
 
-This exercise you will read through training setup for OpenSearch and understand the components we will use. Important to understand that OpenSearch Stack is built by two core components called `OpenSearch` and `OpenSearch Dashboards`. Data itself is stored in a `NoSQL` based DBMS as `JSON` documents. Additionally we will introduce `FluentD` and `OpenSearch Python client` to load two additional `data sets`, next to the two the `sample data sets`.
+This exercise you will read through training setup for OpenSearch and understand the components we will use. Important to understand that OpenSearch Stack is built by two core components called `OpenSearch` and `OpenSearch Dashboards`. Data itself is stored in a `NoSQL` based DBMS as `JSON` documents. By nature `NoSQL` doesn't require a schema to start ingesting data. Additionally we will introduce `FluentD` and `OpenSearch Python client` to load two additional `data sets`, next to the two the `sample data sets`.
 
 <img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/01-Introduction/content/training-setup.png" alt="training-setup">
+
+### 3.1 - Examine the training setup components and data sets
+
+Examine the components that are used and which data sets are imported in OpenSearch.
+- Can you find the core components that built OpenSearch?
+- Explain a peer attendee what the core difference is between NoSQL and SQL based databases.
+
+## Next Steps
+
+You are ready to start with the second lab about [Cluster Deployment](01-ClusterDeployment/README.md) in OpenSearch. Be aware that the trainer might have to explain the training material and provide additional instructions for a jump start.
+
+Enjoy the exercises!!!
