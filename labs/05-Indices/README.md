@@ -87,7 +87,7 @@ Now go back to the OpenSearch node Terminal and find out that the document is st
 #docker exec -it 2497d8557e66 bash
 cat translog-2.tlog
 ```
-### 1.3 - Extending shards
+### 1.4 - Extending shards
 
 Another great experiment is increasing the total number of shards to five. To increase the total number of shards we have to delete the previous `hello-world` index.
 
@@ -119,7 +119,7 @@ ls data/nodes/0/indices/<uuid>
 0  2  _state
 ```
 
-### 1.3 - Extending a replica
+### 1.5 - Extending a replica
 
 Last part is increasing with a replica. 
 
