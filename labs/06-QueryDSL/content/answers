@@ -1,0 +1,87 @@
+1.1
+GET _search
+{
+  "size": 50,
+  "query": {
+    "match_all": {}
+  }
+}
+
+4.1
+GET /opensearch_dashboards_sample_data_flights/_search
+{
+  "query": {
+    "terms": {
+      "Carrier": [
+        "BeatsWest",
+        "OpenSearch-Air"
+      ]
+    }
+  }
+}
+
+5.3
+
+
+```
+GET /opensearch_dashboards_sample_data_flights/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "FlightDelayType": {
+              "query": "No Delay"
+            }
+          }
+        },
+        {
+          "match": {
+            "DestWeather": {
+              "query": "Sunny"
+            }
+          }
+        }
+      ],
+      "should": [
+        {
+          "range": {
+            "dayOfWeek": {
+              "gte": 2,
+              "lte": 3
+            }
+          }
+        }
+      ],
+      "filter": [
+        {
+          "term": {
+            "OriginCountry": "DE"
+          }
+        }
+      ]
+    }
+  }
+}
+```
+
+6.3
+
+POST _render/template
+{
+  "id": "cartoon_search_template",
+  "params": {
+    "Family": "Simpsons"
+  }
+}
+
+GET _search/template
+{
+  "id": "cartoon_search_template",
+  "params": {
+    "Family": "Burns",
+    "from": 0,
+    "size": 1
+  }
+}
