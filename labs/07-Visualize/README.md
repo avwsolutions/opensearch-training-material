@@ -17,15 +17,34 @@ This exercise helps you to understand the basics of how to interpretent visualiz
 before we can start you have to import the `Sample web logs`. During `Getting Started` you also imported the `Sample ecommerce data` set. 
 
 After a succesful import,  Nagivate to **Home** and top-right click **Dev Tools**.
+
 ### 1.1 - Data tables
+
+We will start with our first visualization, which is part of the core package. Data tables are the most straightforward way of displaying your data.
+Before we can start creating any visualization we either need a `saved search` or `index-pattern`.  You alredy got introduced into search, but I shortly wil explain what an index pattern is. Index pattern is used for translation OpenSearch Dashboards fields towards OpenSearch field. The configuration provides mapping and potential conflicts that can occur. Important to understand is that a index pattern may need to be refreshed if you add an additional field.
+
+First look at example below and create an `index-pattern` for the cartoons alias.
 
 <img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/07-Visualize/content/index-patterns.gif" alt="index-patterns">
 
+Now that you have created a index pattern called 'cartoons` we can start creating a visualization with the following characteristics.
+
+Metrics
+- One aggregation of type average on field 'age'.
+
+Buckets
+- One `split rows` using the `terms` aggregation on field 'family_name' using default ordering.
+
+Additional options
+- Ensure that you calculate the total average and percentages are shown.
+
+As guidance see the following example.
 
 <img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/07-Visualize/content/visual-datatable.gif" alt="visual-datatable">
 
-
 ### 1.2 - Pies and Donuts
+
+
 ### 1.3 - Timeseries with Lines
 
 ### 1.4 - Tag cloud
