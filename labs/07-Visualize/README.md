@@ -27,7 +27,7 @@ First look at example below and create an `index-pattern` for the cartoons alias
 
 <img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/07-Visualize/content/index-patterns.gif" alt="index-patterns">
 
-Now that you have created a index pattern called 'cartoons`. Our goal is to get insides in the average age within the specific families and overall.
+Now that you have created a index pattern called 'cartoons`. Our goal is to create insights in the average age within the specific families and overall.
 
 We can start creating a visualization with the following characteristics.
 
@@ -44,8 +44,32 @@ As guidance see the following example.
 
 <img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/07-Visualize/content/visual-datatable.gif" alt="visual-datatable">
 
+Analyze, inspect the results and try to create a data table yourself.
+
 ### 1.2 - Pies and Donuts
 
+Another great visualizations are Pies or Donuts. They help to give direct overview in categories. Let's create another example using the cartoons index pattern.
+
+Our goal is to create insights in the Top 5 families, which is based on counting the family members.
+
+We can start creating a visualization with the following characteristics.
+
+**Metrics**
+- One aggregation of type count on 'documents'.
+
+**Buckets**
+- One `split rows` using the `terms` aggregation on field 'family_name'. Order by count with a maximum of 5 results.
+
+Additional options
+- Ensure that you deselect the `Donut` option.
+
+As guidance see the following example.
+
+<img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/07-Visualize/content/visual-pie.gif" alt="visual-pie">
+
+Now try to answer some questions regarding this visualization.
+- Analyze and inspect the results.
+- Can you include 'married' as another layer using an additional bucket?
 
 ### 1.3 - Timeseries with Lines
 
