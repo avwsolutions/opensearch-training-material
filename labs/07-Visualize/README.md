@@ -19,7 +19,10 @@ before we can start you have to import the `Sample web logs`. During `Getting St
 After a succesful import,  Nagivate to **Home** and top-right click **Dev Tools**.
 ### 1.1 - Data tables
 
-<img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/07-Visualize/content/create-vdi.png" alt="create-vdi">
+<img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/07-Visualize/content/index-patterns.gif" alt="index-patterns">
+
+
+<img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/07-Visualize/content/visual-datatable.gif" alt="visual-datatable">
 
 
 ### 1.2 - Pies and Donuts
