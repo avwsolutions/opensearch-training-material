@@ -27,12 +27,14 @@ First look at example below and create an `index-pattern` for the cartoons alias
 
 <img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/07-Visualize/content/index-patterns.gif" alt="index-patterns">
 
-Now that you have created a index pattern called 'cartoons` we can start creating a visualization with the following characteristics.
+Now that you have created a index pattern called 'cartoons`. Our goal is to get insides in the average age within the specific families and overall.
 
-Metrics
+We can start creating a visualization with the following characteristics.
+
+**Metrics**
 - One aggregation of type average on field 'age'.
 
-Buckets
+**Buckets**
 - One `split rows` using the `terms` aggregation on field 'family_name' using default ordering.
 
 Additional options
