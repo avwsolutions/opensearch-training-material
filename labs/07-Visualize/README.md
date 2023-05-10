@@ -83,7 +83,7 @@ Our goal is to create insights in the average increase of age based on ages peri
 We can start creating a visualization with the following characteristics.
 
 **Metrics**
-- Aggregation (Y-Axis) of type average on field 'age'.
+- Aggregation (`Y-Axis`) of type average on field 'age'.
 
 **Buckets**
 - One `X-Axis` using the `Range` aggregation on field 'age' with the following ranges [ "0-23", "23-65", "65-85" ].
