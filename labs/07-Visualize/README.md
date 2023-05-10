@@ -101,6 +101,30 @@ Now try to answer some questions regarding this visualization.
 - Maybe you want to adjust or add another range to ensure everybody above 85 is included?
 
 ### 1.4 - Tag cloud
+
+Ever looked for trending and frequently used words? Then you may have used a `word cloud`. Part of the core visualizations we can create a `tag cloud`.  Let's look a trending words in our `cartoons`. Our goal is to give insights in trending cartoon words.
+
+We can start creating a visualization with the following characteristics.
+
+**Metrics**
+- Aggregation of type count on 'tag size'.
+
+**Buckets**
+- One `Tags` using the `Terms` aggregation on field 'about'. Order by count with a maximum of 50 results.
+
+**Additional options**
+- Ensure that the orientation is single.
+- Ensure text-scale is linair.
+
+As guidance see the following example.
+
+<img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/07-Visualize/content/visual-cloud.gif" alt="visual-cloud">
+
+Now try to answer some questions regarding this visualization.
+- Analyze and inspect the results.
+- Try to experiment with the orientation and text-scale.
+- Can you change the `Terms` aggregation field from a text to a keyword, can you explain  what happens? 
+
 ## Exercise 2 - Visualization types
 
 This exercise explains you which types are available to create visualizations using OpenSearch Dashboards.

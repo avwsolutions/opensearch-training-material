@@ -673,6 +673,7 @@ PUT _template/favorite-cartoon
     "properties": {
       "about": {
         "type": "text",
+        "fielddata": true,
         "fields": {
           "keyword": {
             "type": "keyword",
@@ -702,6 +703,7 @@ PUT _template/favorite-cartoon
       },
       "personality": {
         "type": "text",
+        "fielddata": true,
         "fields": {
           "keyword": {
             "type": "keyword",
