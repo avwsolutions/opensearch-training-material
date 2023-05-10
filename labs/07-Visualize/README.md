@@ -32,12 +32,12 @@ Now that you have created a index pattern called 'cartoons`. Our goal is to crea
 We can start creating a visualization with the following characteristics.
 
 **Metrics**
-- One aggregation of type average on field 'age'.
+- Aggregation of type average on field 'age'.
 
 **Buckets**
 - One `split rows` using the `terms` aggregation on field 'family_name' using default ordering.
 
-Additional options
+**Additional options**
 - Ensure that you calculate the total average and percentages are shown.
 
 As guidance see the following example.
@@ -55,12 +55,12 @@ Our goal is to create insights in the Top 5 families, which is based on counting
 We can start creating a visualization with the following characteristics.
 
 **Metrics**
-- One aggregation of type count on 'documents'.
+- Aggregation of type count on 'documents'.
 
 **Buckets**
 - One `split rows` using the `terms` aggregation on field 'family_name'. Order by count with a maximum of 5 results.
 
-Additional options
+**Additional options**
 - Ensure that you deselect the `Donut` option.
 
 As guidance see the following example.
@@ -72,6 +72,33 @@ Now try to answer some questions regarding this visualization.
 - Can you include 'married' as another layer using an additional bucket?
 
 ### 1.3 - Timeseries with Lines
+
+Visuals are most of the time shown as line on a X-Y Axis. They help to easily spot increases and decreases within buckets like with a certain metric. Let's create another example using the cartoons index pattern.
+
+Our goal is to create insights in the average increase of age based on ages periods. For age periods we will use
+- 0 till 23 years.
+- 23 till 65 years.
+- 65 till 85 years.
+
+We can start creating a visualization with the following characteristics.
+
+**Metrics**
+- Aggregation (Y-Axis) of type average on field 'age'.
+
+**Buckets**
+- One `X-Axis` using the `Range` aggregation on field 'age' with the following ranges [ "0-23", "23-65", "65-85" ].
+
+**Additional options**
+- Ensure that you selected line mode 'Normal' and the 'X-axis' is on the bottom.
+
+As guidance see the following example.
+
+<img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/07-Visualize/content/visual-line.gif" alt="visual-line">
+
+Now try to answer some questions regarding this visualization.
+- Analyze and inspect the results.
+- Can you include a 'Threshold line` of for the age of '44'?
+- Maybe you want to adjust or add another range to ensure everybody above 85 is included?
 
 ### 1.4 - Tag cloud
 ## Exercise 2 - Visualization types
