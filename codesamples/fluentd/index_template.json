@@ -1,0 +1,72 @@
+{
+    "index_patterns": ["bundesliga"], 
+    "settings": {
+      "index": {
+        "number_of_shards": "1",
+        "number_of_replicas": "1"
+      }
+    },
+    "mappings": {
+      "properties": {
+        "@timestamp": {
+          "type": "date"
+        },
+        "awayteam": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "date": {
+          "type": "date",
+          "format": "dd/MM/yyyy|dd/MM/yy" 
+        },
+        "dataset": {
+            "type": "keyword",
+            "ignore_above": 256
+        },
+        "ftag": {
+          "type": "integer"
+        },
+        "fthg": {
+          "type": "integer"
+        },
+        "ftr": {
+          "type": "keyword",
+          "ignore_above": 256
+        },
+        "htag": {
+          "type": "integer"
+        },
+        "hthg": {
+          "type": "integer"
+        },
+        "htr": {
+          "type": "keyword",
+          "ignore_above": 256
+        },
+        "hometeam": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "season": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        }
+      }
+    },
+    "aliases": {}
+}
