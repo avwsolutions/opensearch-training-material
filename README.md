@@ -6,7 +6,7 @@ OpenSearch makes things easier, such as performing interactive log analytics, re
 
  In this hands-on workshop the atttendee learns the fundamental skills needed to understand the concepts en start creating their OpenSearch configuration and using OpenSearch Dashboards. Main topics are mentioned in the [Labs](labs/README.md).
  
- The hands-on part is fully scenario based, including helpful lab exercises and sample code.
+ The hands-on part is fully scenario based, including helpful [lab exercises](labs/README.md) and [sample code](codesamples/README.md).
  
  Wait for the trainer when starting with lab material.
 
