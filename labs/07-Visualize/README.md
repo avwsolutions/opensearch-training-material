@@ -158,6 +158,8 @@ Now try to answer some questions regarding this visualization.
 
 ### 2.2 - Counters and Gauges
 
+Single value metrics like Counters and Gauges are great when keeping track on KPIs or other target to keep an eye on.
+
 ### 2.3 - Heatmap
 
 ### 2.4 - Maps
