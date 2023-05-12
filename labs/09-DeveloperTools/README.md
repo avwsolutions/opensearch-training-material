@@ -12,7 +12,7 @@ The following key topics are part of these exercises:
 
 ## Exercise 1 - Query Console
 
-This exercise explains you what the Query Console is and why is it helpful when administering and managing OpenSearch. In the previous labs you already worked with Dev Tools. Also you already got introduced in the CAT API, but now we will dive further into some Administration details.
+This exercise explains you what the Query Console is and why is it useful when administering and managing OpenSearch. In the previous labs you already worked with Dev Tools. Also you already got introduced in the CAT API, but now we will dive further into some Administration details.
 
 ### 1.1 - Personalizing Query Console settings
 
@@ -37,7 +37,7 @@ All questions will be asked using the CAT API. You may still remember it provide
 
 Helpful tools are that you directly can `jump to online documentation` or the selected Request gets `Auto Idented`. These features are accessible by clicking the constructor icon.
 
-<img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/09-DeveloperTools/content/auto-indent.png" alt="auto-ident">
+<img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/09-DeveloperTools/content/auto-ident.png" alt="auto-ident">
 
 First try to run the `Cluster health` by using the CAT API. 
 
