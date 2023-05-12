@@ -131,6 +131,31 @@ This exercise explains you which types are available to create visualizations us
 
 ### 2.1 - Charts
 
+Charts are helpful in many ways like to depict trends. You already worked with the `line chart`, but not yet plotted on a timestamp based `X-Axis`.
+Most common cases you wil plot things over a certain time period. Personally I always like a `stacked` `area chart`, but again this depends on expected visisbility. For this we are are using the `sample web logs`. Our goal is to give insights in the various machine operating systems that are using the web service over time.
+
+We can start creating a visualization with the following characteristics.
+
+**Metrics**
+- Aggregation (`Y-Axis`) of type count on documents.
+
+**Buckets**
+- One `X-Axis` using the `Date Histogram` aggregation. For now keep the min interval on 'auto'.
+- One `Split Series` using the `Terms` aggregation on field 'machine.os.keyword'. Keep the size on '5'.
+
+**Additional options**
+- Keep the chart type on 'area' and the mode on 'stack'.
+
+As guidance see the following example.
+
+<img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/07-Visualize/content/visual-area.gif" alt="visual-area">
+
+
+Now try to answer some questions regarding this visualization.
+- Analyze, inspect the results and start with optimizing the visualization.
+- Try to experiment with the chart type and mode. What do you like here?
+- Can you change the minimum interval to 12 hours (X-Axis)instead of auto?
+
 ### 2.2 - Counters and Gauges
 
 ### 2.3 - Heatmap
