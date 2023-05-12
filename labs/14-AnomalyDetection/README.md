@@ -25,7 +25,7 @@ Working with Anomaly detection is easy, create a detector in just four steps.
 
 Also OpenSearch provides several sample detectors, which can be helpful to look into.
 
-<img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/07-Visualize/content/anomaly-sample.png" alt="anomaly-sample">
+<img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/14-AnomalyDetection/content/anomaly-sample.png" alt="anomaly-sample">
 
 Let's give it a try and start configuring the Monitor eCommerce orders detector sample.
 
@@ -73,7 +73,7 @@ We are now creating a detector from scratch. We will select the sample data logs
 
 As guidance see the following example.
 
-<img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/07-Visualize/content/anomaly-detector.gif" alt="anomaly-detector">
+<img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/14-AnomalyDetection/content/anomaly-detector.gif" alt="anomaly-detector">
 
 
 Now try to answer some questions regarding aggregations.
