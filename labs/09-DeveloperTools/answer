@@ -1,0 +1,1 @@
+SELECT character_name, partner, age FROM cartoons WHERE family_name = "Simpsons";
