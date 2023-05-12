@@ -41,9 +41,10 @@ First try to run the `Cluster health` by using the CAT API.
 GET _cat/health
 ```
 
-You may already noticed auto completion shows some hits. See below when looking into the available Nodes and their roles.
+You may already noticed auto completion shows some hits. See below when looking into the  `Node availability and roles`.
 
 ```
 GET _cat/nodes
+```
 
 <img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/09-DeveloperTools/content/suggest-dev.png" alt="suggest-dev">
