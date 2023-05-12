@@ -1,72 +1,75 @@
 {
-    "index_patterns": ["bundesliga"], 
-    "settings": {
-      "index": {
-        "number_of_shards": "1",
-        "number_of_replicas": "1"
-      }
-    },
-    "mappings": {
-      "properties": {
-        "@timestamp": {
-          "type": "date"
-        },
-        "awayteam": {
-          "type": "text",
-          "fields": {
-            "keyword": {
-              "type": "keyword",
-              "ignore_above": 256
-            }
+  "order": 0,
+  "index_patterns": [
+    "bundesliga"
+  ],
+  "settings": {
+    "index": {
+      "number_of_shards": "1",
+      "number_of_replicas": "1"
+    }
+  },
+  "mappings": {
+    "properties": {
+      "date": {
+        "format": "dd/MM/yyyy||d/M/yyyy",
+        "type": "date"
+      },
+      "@timestamp": {
+        "type": "date"
+      },
+      "htag": {
+        "type": "integer"
+      },
+      "ftag": {
+        "type": "integer"
+      },
+      "ftr": {
+        "ignore_above": 256,
+        "type": "keyword"
+      },
+      "awayteam": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "ignore_above": 256,
+            "type": "keyword"
           }
-        },
-        "date": {
-          "type": "date",
-          "format": "dd/MM/yyyy|dd/MM/yy" 
-        },
-        "dataset": {
-            "type": "keyword",
-            "ignore_above": 256
-        },
-        "ftag": {
-          "type": "integer"
-        },
-        "fthg": {
-          "type": "integer"
-        },
-        "ftr": {
-          "type": "keyword",
-          "ignore_above": 256
-        },
-        "htag": {
-          "type": "integer"
-        },
-        "hthg": {
-          "type": "integer"
-        },
-        "htr": {
-          "type": "keyword",
-          "ignore_above": 256
-        },
-        "hometeam": {
-          "type": "text",
-          "fields": {
-            "keyword": {
-              "type": "keyword",
-              "ignore_above": 256
-            }
+        }
+      },
+      "htr": {
+        "ignore_above": 256,
+        "type": "keyword"
+      },
+      "season": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "ignore_above": 256,
+            "type": "keyword"
           }
-        },
-        "season": {
-          "type": "text",
-          "fields": {
-            "keyword": {
-              "type": "keyword",
-              "ignore_above": 256
-            }
+        }
+      },
+      "hthg": {
+        "type": "integer"
+      },
+      "dataset": {
+        "ignore_above": 256,
+        "type": "keyword"
+      },
+      "fthg": {
+        "type": "integer"
+      },
+      "hometeam": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "ignore_above": 256,
+            "type": "keyword"
           }
         }
       }
-    },
-    "aliases": {}
+    }
+  },
+  "aliases": {}
 }
