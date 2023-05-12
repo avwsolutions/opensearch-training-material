@@ -23,7 +23,7 @@ This hands-on lab experience would focus on using OpenSearch and creating search
 | 11  | [Plugins](11-Plugins/README.md) | In this lab during the exercises attendees will learn about `Plugins`, background philosophy why they exist and the future of this key architecture foundation. |
 | 12  | [Observability](12-Observability/README.md) | In this lab during the exercises attendees will learn about `Observability`, the concept and how OpenSearch can help to analyse and visualize Observability data like events, metrics and traces.|
 | 13  | [Notifications](13-Notifications/README.md) | In this lab during the exercises attendees will learn about `Notifications`, related management activities and configure key features like alert conditions, channels and more.|
-| 14  | [Detectors](14-Detectors/README.md) | In this lab during the exercises attendees get an introduction in using Anomaly detection using `Detectors`.|
+| 14  | [Anomaly Detection](14-AnomalyDetection/README.md) | In this lab during the exercises attendees get an introduction in using `Anomaly detection` using detectors.|
 | 15  | [Integrations](15-Integrations/README.md) | In this lab during the exercises attendees get an introduction in configuring integrations like `Data Prepper` and `FluentD`.|
 | 16  | [Development](16-Development/README.md) | In this lab during the exercises attendees will get a brief introduction in `OpenSearch Development` by understanding the Github project and possibilities to contribute,  extend OpenSearch and being part of the `OSS` community.|
 
