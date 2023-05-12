@@ -180,7 +180,13 @@ GET bundesliga/_count
 Now try to answer some questions regarding FluentD.
 - What kind of data can FluentD collect for you?
 - How are the document fields mapped?
+
+Now follow the last activities to make everything available in `OpenSearch Dashboards`.
+
+- Create an index pattern `bundesliga` using the `date` field.
 - Create a dashboard of the data set that contains a minimum of Controls, Descriptions, Search panel and approx four Visualizations.
+
+Take notice of years of data points, rather then minutes.
 
 ## Next Steps
 
