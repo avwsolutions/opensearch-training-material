@@ -207,7 +207,7 @@ Sometimes you may want to plot data on a map, for example orders per country. Ma
 To demonstrate this we are going to first play and look with the configuration of the `[Flights] Flights Status on Maps Destination Location` visualization. This requires the sample flights data to be imported.
 
 Now try to answer some questions regarding this visualization.
-- Analyze, inspect the results and start with looking into the various layers.
+- Analyze, inspect the results and start with looking into the various layers and necessary field types.
 - Try to experiment with another document layer that only shows flights from / to DE.
 - Can you add a 'Split chart' so we can see the order results per week ?
 
@@ -215,11 +215,24 @@ As guidance see the following example.
 
 <img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/07-Visualize/content/visual-maps.gif" alt="visual-maps">
 
-### 2.5 - Purpose of Controls and Markdown 
+### 2.5 - Purpose of Controls and Markdown
 
-### 3.2 - Using TSDB
+To other special visualizations are `Controls` and `Markdown`.  Main purpose is providing guidance to the dashboard.
+- Controls provide menu-driven filters to guide the user to a particular set of documents.
+- Markdown helps to explain the purpose of a dashboard.
 
-### 3.3 - Using VisBuilder
+This exercise is free format, which means you can create your own dashboard using the cartoons index. The only thing that is required is that it must contain:
+- One control panel.
+- One Markdown panel.
+- One Search panel.
+- One or two visualization panels. You may reuse the cartoon related panels above.
+
+Combine this together and create your first dashboard.
+
+As guidance see the following example.
+
+<img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/07-Visualize/content/dashboard-cartoons.png" alt="dashboard-cartoons">
+
 ## Exercise 3 - Visualization tools
 
 This exercise helps you to understand the basics of how to interpretent / experience visualizations tools, use and develop visualizations using tools like Timeline, TSDB, and VisBuilder.
