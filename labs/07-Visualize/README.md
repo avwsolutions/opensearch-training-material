@@ -158,11 +158,62 @@ Now try to answer some questions regarding this visualization.
 
 ### 2.2 - Counters and Gauges
 
-Single value metrics like Counters and Gauges are great when keeping track on KPIs or other target to keep an eye on.
+Single value metrics like Counters and Gauges are great when keeping track on KPIs or other target to keep an eye on. Let's create somee counters around the following KPI's.  To complete this we wil use thes sample ecommerce data set.
 
-### 2.3 - Heatmap
+We can start creating a visualization with the following characteristics.
+
+- Counter that simply counts the total orders.
+- Gauge with total sum of total price with tax.
+- Gauge with total sum of total price before tax.
+
+As guidance see the following example.
+
+<img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/07-Visualize/content/visual-goal.gif" alt="visual-goal">
+
+Now try to answer some questions regarding this visualization.
+- Analyze, inspect the results and start with optimizing the visualization.
+- Try to experiment with the color schema and color scale. What do you like here?
+- Can you add a visual goal if we have above 2000 orders (range ?) the metric must be green, otherwise it must be red?
+
+### 2.3 - Heat map
+
+Heat maps are great to spot areas with a high density. Create a heat map that shows the correlation of insights in sales per category defined per country.
+
+We can start creating a visualization with the following characteristics.
+
+**Metrics**
+- Aggregation of type sum on 'taxless total price'.
+
+**Buckets**
+- One `X-Axis` using the `Terms` aggregation on field 'country_iso_code' with a size of 10.
+- One `Y-Axis` using the `Terms` aggregation on field 'category' with a size of 6.
+
+**Additional options**
+- Use the 'green' color schema.
+- Set the 'total of colors' to 10.
+
+As guidance see the following example.
+
+<img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/07-Visualize/content/visual-heatmap.gif" alt="visual-heatmap">
+
+Now try to answer some questions regarding this visualization.
+- Analyze, inspect the results and start with optimizing the visualization.
+- Try to experiment with the color schema and color scale. What do you like here?
+- Can you add a 'Split chart' so we can see the order results per week ?
 
 ### 2.4 - Maps
+
+Sometimes you may want to plot data on a map, for example orders per country. Maps are a special kind of visualization, since they need a special field type.
+To demonstrate this we are going to first play and look with the configuration of the `[Flights] Flights Status on Maps Destination Location` visualization. This requires the sample flights data to be imported.
+
+Now try to answer some questions regarding this visualization.
+- Analyze, inspect the results and start with looking into the various layers.
+- Try to experiment with another document layer that only shows flights from / to DE.
+- Can you add a 'Split chart' so we can see the order results per week ?
+
+As guidance see the following example.
+
+<img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/07-Visualize/content/visual-maps.gif" alt="visual-maps">
 
 ### 2.5 - Purpose of Controls and Markdown 
 
