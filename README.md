@@ -14,5 +14,9 @@ OpenSearch makes things easier, such as performing interactive log analytics, re
 
 You are ready to start with the introduction into the [Labs](labs/README.md).
 
+Additional I want to give a credits to the OpenSearch community, AWS, Logz.io and my Opster friends for sharing such great material (and being part).
+
 Enjoy the training labs!!!
+
+<img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/example-dashboard.png" alt="example-dashboard">
 
