@@ -45,7 +45,7 @@ Now try the following activities and try to answer some questions.
 
 ## Exercise 3 - Notebooks
 
-This exercise you learn about using notebooks. Notebook are a single pain glass for analysts and reliability engineers that analyze and inspect data sets. Notebooks can be used to store snippets. We are going to add the sample notebooks that are provided.
+This exercise you learn about using notebooks. Notebook are a single pain glass for analysts and reliability engineers that analyze and inspect data sets. Notebooks can be used to store snippets in code blocks and create visualizations. We are going to add the sample notebooks that are provided.
 
 Open `Notebooks` under `Observability`.  You wil see the possibility to import sample notebooks. Give that a try.
 
@@ -55,7 +55,8 @@ As guidance see the following example.
 
 Now try the following activities and try to answer some questions.
 - Analyze and inspect the various notebooks that are created.
-- Create now your own notebook that contains some queries and visuals.
+- Create a on-demand report definition of one of the notebooks.
+- Create now your own notebook that contains some code blocks and visualizations.
 
 ## Next Steps
 
