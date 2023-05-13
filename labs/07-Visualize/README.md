@@ -239,6 +239,77 @@ This exercise helps you to understand the basics of how to interpretent / experi
 
 ### 3.1 - Using Timeline
 
-### 3.2 - Using TSDB
+Timeline is based on Timelion. Timelion was created in 2017 as a quick analysis syntax for data analysts using Elasticsearch. 
+Just like any panel you can start with creating a new visualization. Timeline supports autocomplete and provides suggestions. 
+
+Again this is an old skool tool, which is only helpful for certain use cases like applying mathematical calculations.
+
+Let's first try a simple expression like below. Keep the interval on **Auto**
+
+```
+.es(*)
+```
+
+Now try go query for a specific text hit in the field 'agent'.
+
+```
+.es(q=agent:Windows,index=opensearch_dashboards_sample_data_logs).label(Windows)
+```
+
+No extend this with the Linux agents, hereby you combine two queries.
+
+```
+.es(q=agent:Windows,index=opensearch_dashboards_sample_data_logs).label(Windows),.es(q=agent:Linux,index=opensearch_dashboards_sample_data_logs).label(Linux)
+```
+
+Add **.bars()** to have bars.
+
+```
+.es(q=agent:Windows,index=opensearch_dashboards_sample_data_logs).label(Windows).bars(),.es(q=agent:Linux,index=opensearch_dashboards_sample_data_logs).label(Linux).bars()
+```
+
+Another one. Let's now split a field, (using Terms aggregation) like below.
+
+```
+.es(split=machine.os.keyword:3)
+```
+
+Offset in time is also possible, when you want to compare traffic loads.
+
+```
+.es().label('Current week'), .es(offset=-1w).label('Last week')
+```
+
+You can also use functions like min(), max() and avg().
+
+```
+.es().bars(stack=false).color(#F44336), .min(.es(), 25).bars(stack=false).color(#8BC34A)
+```
+
+Many more expressions are available, but wil you ever use them? I doubt, since tools like TSDB and VisBuilder are much easier to build visualizationa and dashboards.
+
+### 3.2 - Using TSVB
+
+TSVB is such tool which really is an improvement combining both logs and timeseries. It combines Time Series, metrics, top, gauges, markdown and tables in one single tool. Most valueable is that queries can run over multiple indices and markers can be used on visualizations.
+
+Now create TSVB dashboard that fullfills the following use case.
+
+- One timeseries block for count of all documents.
+- One timeservies block for avg memory usage of PHP grouped by a terms of the client's their machine OS.
+- Ensure that bomb icons are shown when a response is higher then 200, which is most if the time a HTTP error.
+- Ensure that you only use one index.
 
 ### 3.3 - Using VisBuilder
+
+VisBuilder is the new UI tool that fully supports drag n drop, but not yet GA. VisBuilder is inspired by Lens. 
+
+Give VisBuilder a try and create some insights using drag n' drop experience.
+
+- Quickly build a visualization that shows the taxless total price per customer.
+- Quickly build a table that shows unique count of customer (ids) per category.
+
+## Next Steps
+
+You are ready to start with the next lab about [Aggregations](../08-Aggregations/README.md) in OpenSearch. Be aware that the trainer might have to explain the training material and provide additional instructions for a jump start.
+
+Enjoy the exercises!!!
