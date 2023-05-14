@@ -72,7 +72,7 @@ GET _cat/recovery
 
 ### 1.3 -  Using Auto Ident
 
-Auto ident is one of the feature that is really helpful when you are typing PUT or POST requests. Everybody likes order and well set brackets.
+Auto indent is one of the feature that is really helpful when you are typing PUT or POST requests. Everybody likes order and well set brackets.
 
 Use the following as input for adding an index template. On purpose I have broken some brackets, so it's time to fix.
 
