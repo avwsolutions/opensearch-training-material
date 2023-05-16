@@ -126,4 +126,4 @@ if ( m.matches() ) {
 
 You are finished with all hands-on labs about OpenSearch. Hopefully you liked the course labs and we met your expections. It's time to close your laptop and enjoy the newly learned skills and knowledge about analytics and text analysis with OpenSearch.
 
-Enjoy the exercises!!!
+Cheers you deserve a :beers:!!!
