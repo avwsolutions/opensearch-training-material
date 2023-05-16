@@ -65,7 +65,7 @@ doc['subscription_price'].value / 12
 doc['@timestamp'].date.dayOfYear
 ```
 
-More info on [Field API expressions]https://www.elastic.co/guide/en/elasticsearch/reference/8.7/modules-scripting-expression.html#_date_field_api).
+More info on [Field API expressions](https://www.elastic.co/guide/en/elasticsearch/reference/8.7/modules-scripting-expression.html#_date_field_api).
 
 **Combining two fields, question and answer**
 
