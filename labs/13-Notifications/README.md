@@ -157,8 +157,24 @@ Now try the following activities and try to answer some questions.
 
 <img src="https://raw.githubusercontent.com/avwsolutions/opensearch-training-material/main/labs/13-Notifications/content/alert.png" alt="alert">
 
-- Try to create a monitor yourself that triggers on a custom index value.
+- Try to create a rogue monitor yourself that triggers on a custom index value.
 
+As example you can monitor if any rogue `family_name` enters the `simpsons` index again. For this you should use a **Per query monitor** using the **Extraction query editor** method. For the query you can use a simple **Term query** to catch the rogue family name. Customize the **trigger** and **action** message for your needs.
+
+Just create the monitor and reuse the rogue character from [Exercise 4.4](../04-Discover/README.md).
+
+Interested in the actual JSON document that defined your monitor?
+
+```
+GET _plugins/_alerting/monitors/_search
+{
+  "query": {
+    "match" : {
+      "monitor.name": "rogue"
+    }
+  }
+} 
+```
 ## Next Steps
 
 You are ready to start with the next lab about [Anomaly detection](../14-AnomalyDetection/README.md) in OpenSearch. Be aware that the trainer might have to explain the training material and provide additional instructions for a jump start.
